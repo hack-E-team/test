@@ -6,8 +6,6 @@ services:
     container_name: django_app
     env_file:
       - .env.prod
-    volumes:
-      - static_volume:/app/myproject/static
     expose:
       - "8000"
     restart: always
@@ -18,7 +16,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - static_volume:/app/myproject/static
+      - ./staticfiles:/app/staticfiles
       - ./infra/docker/nginx/conf.d:/etc/nginx/conf.d
     depends_on:
       - web
