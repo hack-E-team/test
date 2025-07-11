@@ -24,7 +24,6 @@ static/
 .env
 .env.*
 !.env.example
-# 例: .env.dev, .env.prod など
 
 # VSCode設定ファイル
 .vscode/
