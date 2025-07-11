@@ -1,14 +1,38 @@
 # 開発環境設定
 
+## githubの操作
+
+``` bash
+# 1. リポジトリをcloneする（mainブランチがデフォルト）
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
+
+# 2. devブランチを取得してチェックアウト
+git fetch origin dev
+git checkout -b dev origin/dev
+
+# 3. 作業用ブランチをdevから切る（例: feature/some-task）
+git checkout -b feature/some-task
+
+# 4. コードを編集する
+
+# 5. 変更をステージング＆コミット
+git add ～
+git commit -m "説明"
+
+# 6. リモートにプッシュ（初回なので `-u` をつける）
+git push -u origin feature/some-task
+```
+
 ## 環境変数ファイルの作成
 
-ルートディレクトリに、.env.devファイルを作成し、.env.exampleの中身をコピーして、貼り付けてください。（本番環境は.env.prod）
+ルートディレクトリに.env.devファイルを作成し、.env.exampleの中身をコピペしてください。（本番環境は.env.prod）
+以下のコマンドで自動で作成されます。
+作成したら、your～となっている変数を自分で分かりやすいものに書き換えてください。
 
 ``` bash
 cp .env.example .env.dev
 ```
-
-中の変数のうち、your～となっている変数を自分で分かりやすいものに書き換えてください。
 
 ## 開発環境の起動
 
