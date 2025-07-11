@@ -11,19 +11,6 @@ SECRET_KEY = os.getenv("SECRET_KEY", "dev-secret-key")
 
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
 
-# RDS/MySQLなど本番DB設定
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv("DB_NAME"),
-        'USER': os.getenv("DB_USER"),
-        'PASSWORD': os.getenv("DB_PASSWORD"),
-        'HOST': os.getenv("DB_HOST"),
-        'PORT': os.getenv("DB_PORT", "3306"),
-    }
-}
-
 # セキュリティ強化設定
 
 SECURE_SSL_REDIRECT = True
