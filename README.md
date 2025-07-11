@@ -7,20 +7,17 @@
 git clone https://github.com/your-username/your-repo.git
 cd your-repo
 
-# 2. devブランチを取得してチェックアウト
+# 2. devブランチを取得して作業用ブランチにチェックアウト
 git fetch origin dev
-git checkout -b dev origin/dev
+git checkout -b feature/some-task origin/dev
 
-# 3. 作業用ブランチをdevから切る（例: feature/some-task）
-git checkout -b feature/some-task
+# 3. コードを編集する
 
-# 4. コードを編集する
-
-# 5. 変更をステージング＆コミット
+# 4. 変更をステージング＆コミット
 git add ～
 git commit -m "説明"
 
-# 6. リモートにプッシュ（初回なので `-u` をつける）
+# 5. リモートにプッシュ（初回なので `-u` をつける）
 git push -u origin feature/some-task
 ```
 
